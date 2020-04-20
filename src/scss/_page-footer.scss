@@ -7,9 +7,9 @@
     color: white;
     margin-top: 8rem;
 
-    @include breakpoint(small-mobile) {
-        margin-top: 0;
-    }
+    // @include breakpoint(small-mobile) {
+    //     margin-top: 0;
+    // }
 }
 
 
@@ -30,10 +30,7 @@
     bottom: 8.5rem;
     justify-content: flex-end;
 
-    @include breakpoint(small-mobile) {
-        position: static;
-        margin: 1.5rem 0;
-    }
+    z-index: 1000;
 }
 
 

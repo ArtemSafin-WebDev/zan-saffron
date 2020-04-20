@@ -7,7 +7,7 @@ export default function() {
 
         currentSelect.select2({
             minimumResultsForSearch: -1,
-            placeholder: "Please select a country",
+            placeholder: "Book a private testing session",
             dropdownParent: currentSelect.parent()
         });
 

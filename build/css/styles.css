@@ -1505,9 +1505,6 @@ img.lazyload:not([src]) {
   font-family: var(--montserrat);
   color: white;
   margin-top: 8rem; }
-  @media only screen and (max-width: 576px) {
-    .page-footer {
-      margin-top: 0; } }
 
 .page-footer__row {
   display: -webkit-box;
@@ -1537,11 +1534,8 @@ img.lazyload:not([src]) {
   bottom: 8.5rem;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: flex-end; }
-  @media only screen and (max-width: 576px) {
-    .page-footer__social {
-      position: static;
-      margin: 1.5rem 0; } }
+          justify-content: flex-end;
+  z-index: 1000; }
 
 .page-footer__social-link {
   background-color: #0000F4;
