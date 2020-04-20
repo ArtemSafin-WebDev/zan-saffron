@@ -1,0 +1,388 @@
+.intro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 0;
+        height: 54.2rem;
+        background-repeat: repeat-x;
+        background-size: auto 100%;
+        background-position: center;
+        background-image: url('../img/pattern.svg');
+        z-index: -1;
+
+
+        @include breakpoint(small-mobile) {
+            height: 30.7rem;
+        }
+    }
+}
+
+.intro__content {
+}
+
+.intro__logo {
+    width: 33.6rem;
+    height: 59rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 17.2rem;
+    background: #fff4f4;
+    border-radius: 9rem;
+
+    @include breakpoint(small-mobile) {
+        width: 23.8rem;
+        height: 37.4rem;
+        margin-top: 6.5rem;
+    }
+}
+
+.intro__logo-image {
+    width: 24.6rem;
+    @include breakpoint(small-mobile) {
+        width: 15.5rem;
+    }
+}
+
+.intro__background-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+
+    z-index: -1;
+}
+
+.intro__text {
+    max-width: 92rem;
+    margin: 0 auto;
+    margin-top: -5rem;
+    font-size: 2rem;
+    line-height: 1.4;
+    text-align: center;
+
+    @include breakpoint(small-mobile) {
+      
+        margin: 0 auto;
+        margin-top: 1.2rem;
+        font-size: 1.6rem;
+    }
+
+    p {
+        margin-bottom: 2rem;
+    }
+}
+
+.intro__flower-block {
+    background-color: #d7d7ff;
+    color: black;
+
+    margin-top: 5rem;
+    padding-top: 5.5rem;
+    padding-bottom: 4.5rem;
+    position: relative;
+
+
+    @include breakpoint(small-mobile) {
+        padding: 5.4rem 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+
+        bottom: 0;
+        height: 90%;
+        background-image: url('../img/flower.svg');
+        background-size: contain;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+
+        @include breakpoint(small-mobile) {
+            height: 23.2rem;
+            background-image: url('../img/flower-mobile.svg');
+            background-size: auto 100%;
+            
+            
+        }
+    }
+}
+
+.intro__flower-block-text-content {
+    max-width: 92rem;
+    margin: 0 auto;
+    font-size: 2rem;
+    line-height: 1.4;
+    text-align: center;
+
+    @include breakpoint(small-mobile) {
+        font-size: 1.6rem;
+    }
+    p {
+        margin-bottom: 2rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.intro__offer-block {
+    padding-top: 15.5rem;
+    padding-bottom: 14rem;
+
+    @include breakpoint(small-mobile) {
+        padding-top: 11.5rem;
+        padding-bottom: 11.5rem;
+    }
+}
+
+.intro__offer-block-content {
+    position: relative;
+    &::before {
+        content: '';
+        width: 4.6rem;
+        height: 3rem;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../img/small-flower-up.svg');
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        bottom: 100%;
+        margin-bottom: 2.5rem;
+    }
+    &::after {
+        content: '';
+        width: 4.6rem;
+        height: 3rem;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../img/small-flower-down.svg');
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        top: 100%;
+        margin-top: 2.5rem;
+    }
+}
+
+.intro__offer-block-quote {
+    border-radius: 9rem;
+    color: white;
+    text-align: center;
+    padding: 6rem;
+    border-radius: 9rem;
+    background-image: linear-gradient(to right, rgba(#0000b7, 0.8), rgba(#0000b7, 0.8)), url('../img/bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+
+    @include breakpoint(small-mobile) {
+        border-radius: 0;
+        padding: 0;
+        padding-top: 6rem;
+        padding-bottom: 5.2rem;
+        background: none;
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: '';
+            position: absolute;
+            left: calc((100vw - 100%) / 2 * -1);
+            width: 100vw;
+            top: 0;
+            bottom: 0;
+            background-image: linear-gradient(to right, rgba(#0000b7, 0.8), rgba(#0000b7, 0.8)), url('../img/bg-mobile.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+    }
+}
+
+.intro__offer-block-quote-heading {
+    font-weight: 700;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+
+    
+}
+
+.intro__offer-block-quote-text {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    font-family: var(--montserrat);
+
+    a {
+        font-weight: 700;
+
+        position: relative;
+
+        &::after {
+            content: '';
+            height: 1px;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            background-color: #fff;
+            position: absolute;
+            margin-top: -0.3rem;
+            transition: opacity .2s;
+        }
+
+        &:link,
+        &:visited {
+            color: inherit;
+        }
+
+
+        &:hover {
+            &::after {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.intro__offer-block-quote-content {
+    max-width: 92rem;
+    margin: 0 auto;
+}
+
+.intro__offer-block-remark {
+    max-width: 92rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+    font-size: 1.7rem;
+    line-height: 1.4;
+    text-align: center;
+
+    @include breakpoint(small-mobile) {
+        font-size: 1.4rem;
+    }
+}
+
+.intro__contacts {
+    background: url('../img/contacts-pattern.svg'), #D7D7FF;
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+    background-size: auto 44.3rem;
+    background-repeat: repeat-x;
+    background-position: bottom 2.6rem center;
+
+    @include breakpoint(small-mobile) {
+        padding: 0;
+        padding-top: 6rem;
+        padding-bottom: 10rem;
+        background-size: auto 44.3rem;
+    }
+}
+
+.intro__contacts-heading {
+    font-weight: 700;
+    color: #0000b7;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+.intro__contacts-form {
+    max-width: 35rem;
+    margin: 0 auto;
+    text-align: center;
+    @include breakpoint(small-mobile) {
+        max-width: none;
+        margin: 0;
+    }
+}
+
+.intro__contacts-form-row {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.intro__contacts-form-input {
+    background: #ffffff;
+    box-shadow: 0px 1rem 2.5rem rgba(0, 0, 183, 0.2);
+    border-radius: 2rem;
+    padding: 2rem 2rem;
+    font-family: var(--montserrat);
+    font-size: 1.6rem;
+    color: #4C5562;
+    @include placeholder {
+        color: #A6AAB1;
+    }
+
+
+    @include breakpoint(small-mobile) {
+        font-size: 1.4rem;
+        padding: 1.7rem 2rem;
+    }
+}
+
+.intro__contacts-form-submit {
+    background: #0000f4;
+    box-shadow: 0px 1rem 2.5rem rgba(0, 0, 183, 0.5);
+    border-radius: 2rem;
+    margin-top: 1rem;
+    color: white;
+    padding: 1.7rem 5.6rem;
+    position: relative;
+    font-weight: 700;
+    font-family: var(--montserrat);
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    text-transform: uppercase;
+
+    @include breakpoint(small-mobile) {
+
+    }
+
+    &::before {
+        content: '';
+        width: 3rem;
+        height: 3rem;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../img/left-flower.svg');
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        position: absolute;
+    }
+    &::after {
+        content: '';
+        width: 3rem;
+        height: 3rem;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../img/right-flower.svg');
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+       
+        position: absolute;
+    }
+   
+}

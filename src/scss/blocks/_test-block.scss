@@ -1,0 +1,14 @@
+.test-block {
+    background-color: #96D603;
+    color: white;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+
+.test-block--with-fullpage-bg {
+    @include fullpageBG {
+        background-color: #560391;
+    }
+}
